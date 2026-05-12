@@ -13,9 +13,26 @@ const badges = [
 
 export function TrustBar() {
   return (
-    <section className="pt-8 pb-20 lg:pt-0">
-<div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-6">
+    <section className="py-16 lg:py-20 bg-slate-900">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <p className="text-blue-400 font-semibold text-xs tracking-widest uppercase mb-3">
+            Why Choose Us
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Built on Trust. Backed by Results.
+          </h2>
+        </motion.div>
+
+        {/* Badges */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">
           {badges.map(({ icon: Icon, label, sub }, i) => (
             <motion.div
               key={label}

@@ -13,6 +13,7 @@ const contactOptions = [
 export function CTASection() {
   return (
     <section
+      id="contact"
       className="py-28 relative overflow-hidden"
       style={{ backgroundColor: "#050A18" }}
     >
@@ -36,12 +37,11 @@ export function CTASection() {
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto text-base leading-relaxed">
             Join Oahu homeowners who made the switch to fast, reliable home
-            charging. Give us a call, send a text, or shoot us an email — we&apos;ll
-            get back to you fast.
+            charging. Contact us and we&apos;ll be in touch shortly!
           </p>
 
           {/* Contact options */}
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <div className="mt-10 flex flex-col items-center sm:flex-row sm:items-stretch justify-center gap-4">
             {contactOptions.map(({ icon: Icon, label, sublabel, href }) => (
               <a
                 key={href}

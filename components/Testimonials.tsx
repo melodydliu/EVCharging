@@ -55,9 +55,7 @@ export function Testimonials() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             What Our Customers Say
           </h2>
-          <p className="mt-3 text-slate-500 max-w-lg mx-auto text-base">
-            Trusted by Oahu homeowners from Honolulu to Kailua.
-          </p>
+
         </motion.div>
 
         {/* Cards */}

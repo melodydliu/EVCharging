@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, MessageSquare, Mail } from "lucide-react";
 import { PHONE_HREF, SMS_HREF, EMAIL_HREF } from "@/lib/constants";
-import { TrustBar } from "@/components/TrustBar";
 
 export function Hero() {
   return (
@@ -34,27 +33,16 @@ export function Hero() {
         <div className="absolute top-1/3 right-1/4 w-[700px] h-[500px] rounded-full bg-blue-600/10 blur-3xl" />
       </div>
 
-      <div className="relative z-10 flex-1 flex items-center w-full">
+      <div className="relative z-10 flex items-center w-full min-h-dvh lg:min-h-0 lg:flex-1">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 lg:pb-0 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
         {/* ── Left: copy + CTAs ── */}
         <div>
-          {/* Location badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-            Serving Oahu, Hawaii
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.12] tracking-tight"
+            className="text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.12] tracking-tight"
           >
             Fast, Professional{" "}
             <span className="text-blue-400">EV Charger</span>
@@ -66,7 +54,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="mt-5 text-lg text-slate-400 leading-relaxed max-w-lg"
+            className="mt-7 text-lg text-slate-400 leading-relaxed max-w-lg"
           >
             Stop slow-charging overnight. VIR Electric installs professional home
             EV chargers for any home — licensed, insured, and often completed
@@ -78,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.3 }}
-            className="mt-8 flex flex-wrap gap-3"
+            className="mt-10 flex flex-wrap gap-3"
           >
             <a
               href={PHONE_HREF}
@@ -108,9 +96,6 @@ export function Hero() {
       </div>
       </div>
 
-      <div className="relative z-10">
-        <TrustBar />
-      </div>
     </section>
   );
 }
