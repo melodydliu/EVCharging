@@ -6,7 +6,7 @@ import { Zap, Phone, Menu, X } from "lucide-react";
 import { PHONE_HREF, PHONE } from "@/lib/constants";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
+  { label: "How It Works", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];

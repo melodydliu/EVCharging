@@ -9,7 +9,7 @@ import {
 } from "@/lib/constants";
 
 const quickLinks = [
-  { label: "Services", href: "#services" },
+  { label: "How It Works", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
