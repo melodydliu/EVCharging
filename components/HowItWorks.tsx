@@ -6,7 +6,7 @@ import { Phone, ScanSearch, Zap } from "lucide-react";
 const steps = [
   {
     icon: Phone,
-    title: "Give Us a Call or Text",
+    title: "Contact Us",
     description:
       "Reach out by phone, text, or email. We'll discuss your home, your EV, and your charging goals — no obligation, no pressure.",
   },
@@ -67,9 +67,6 @@ export function HowItWorks() {
                 <div className="w-14 h-14 rounded-full bg-blue-50 border-2 border-white shadow-md flex items-center justify-center">
                   <step.icon className="w-6 h-6 text-blue-600" strokeWidth={1.75} />
                 </div>
-                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center shadow">
-                  {i + 1}
-                </span>
               </div>
 
               <h3 className="text-base font-bold text-slate-900 mb-2">{step.title}</h3>

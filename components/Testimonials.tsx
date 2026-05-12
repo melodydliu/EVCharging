@@ -5,28 +5,25 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "[Customer Name]",
-    location: "Honolulu",
+    name: "Justin K.",
+    location: "Honolulu, HI",
     review:
-      "VIR Electric made the whole process seamless. They came out next-day, completed the install in a few hours, and I'm now charging at full speed every night. Highly recommend!",
+      "Hit Quinton about a few different outlet options and he broke everything down with pricing for each. Everything felt fair, especially for how thorough he is and the quality of his work. He was able to fit us in same day, which was clutch. Did an awesome job, kept me updated the whole time, and even sent over a work report after showing everything he did. Super solid experience. If you need an electrician, this is your guy!",
     stars: 5,
-    tier: "Gold Package",
   },
   {
-    name: "[Customer Name]",
-    location: "Kailua",
+    name: "Rudy M.",
+    location: "Honolulu, HI",
     review:
-      "Professional, punctual, and fairly priced. The thermal imaging inspection was a great bonus — they actually caught a worn connection at my breaker panel I didn't know about. Great team.",
+      "I needed a level 2 50 amp EV charger installed that also included voltage monitors on the panel. Quinton charged a fair price when I compared to other electrician proposals. He did a phenomenal job with the meter upgrade, running the lines through the house through the garage, and also helped me figure out how to install and use the new charger. Finished on time, was flexible in terms of what I wanted done and when, easy to work with, very cordial, offered even to stick around while I tested everything. Quinton is my electrician going forward if we need additional electrical work done.",
     stars: 5,
-    tier: "Bronze Package",
   },
   {
-    name: "[Customer Name]",
-    location: "Aiea",
+    name: "Katy S.",
+    location: "Mililani, HI",
     review:
-      "Got the Platinum package for my Tesla and it's been life-changing. No more scrambling for public chargers. VIR Electric is the real deal — licensed, local, and top quality.",
+      "Quinton did an excellent job! He was willing to fit us in on short notice and was prompt in arrival. He even had follow up texts on the work done. He also made sure to let me know of any other issues that we could have. I will be recommending VIR Electric to all of my family and friends.",
     stars: 5,
-    tier: "Platinum Package",
   },
 ];
 
@@ -42,7 +39,7 @@ function StarRow({ count }: { count: number }) {
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -90,27 +87,19 @@ export function Testimonials() {
                 <div className="flex items-center gap-2.5">
                   <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
                     <span className="text-blue-600 text-xs font-bold">
-                      {t.name[1]}
+                      {t.name[0]}
                     </span>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">{t.name}</p>
-                    <p className="text-xs text-slate-400">{t.location}, Oahu</p>
+                    <p className="text-xs text-slate-400">{t.location}</p>
                   </div>
                 </div>
-                {/* Tier badge */}
-                <span className="text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full whitespace-nowrap">
-                  {t.tier}
-                </span>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Placeholder note */}
-        <p className="text-center text-xs text-slate-300 mt-8">
-          Placeholder reviews — replace with real customer testimonials before launch.
-        </p>
       </div>
     </section>
   );

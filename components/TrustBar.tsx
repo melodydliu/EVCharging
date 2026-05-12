@@ -4,31 +4,34 @@ import { motion } from "framer-motion";
 import { ShieldCheck, MapPin, Clock, ThumbsUp, ScanLine } from "lucide-react";
 
 const badges = [
-  { icon: ShieldCheck, label: "Licensed & Insured" },
-  { icon: MapPin, label: "Locally Owned · Oahu, HI" },
-  { icon: Clock, label: "Next-Day Available" },
-  { icon: ThumbsUp, label: "90-Day Guarantee" },
-  { icon: ScanLine, label: "Thermal Imaging Included" },
+  { icon: ShieldCheck, label: "Licensed & Insured", sub: "State contractor certified" },
+  { icon: MapPin, label: "Locally Owned", sub: "Serving Oahu, HI" },
+  { icon: Clock, label: "Next-Day Available", sub: "Fast, flexible scheduling" },
+  { icon: ThumbsUp, label: "90-Day Guarantee", sub: "No questions asked" },
+  { icon: ScanLine, label: "Thermal Imaging", sub: "Included with every install" },
 ];
 
 export function TrustBar() {
   return (
-    <section className="bg-slate-50 border-y border-slate-200 py-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-          {badges.map(({ icon: Icon, label }, i) => (
+    <section className="pt-8 pb-20 lg:pt-0">
+<div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-6">
+          {badges.map(({ icon: Icon, label, sub }, i) => (
             <motion.div
               key={label}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="flex items-center gap-2.5 text-slate-700"
+              transition={{ duration: 0.45, delay: i * 0.09 }}
+              className="flex flex-col items-center text-center gap-3 last:col-span-2 last:justify-self-center sm:last:col-span-1 sm:last:justify-self-auto"
             >
-              <div className="w-8 h-8 rounded-lg bg-blue-600/10 flex items-center justify-center flex-shrink-0">
-                <Icon className="w-4 h-4 text-blue-600" />
+              <div className="size-12 rounded-full bg-blue-500/15 ring-1 ring-blue-400/35 flex items-center justify-center shadow-[0_0_24px_rgba(59,130,246,0.2)]">
+                <Icon className="w-6 h-6 text-blue-400" />
               </div>
-              <span className="text-sm font-medium whitespace-nowrap">{label}</span>
+              <div>
+                <p className="text-sm font-semibold text-white leading-snug">{label}</p>
+                <p className="text-xs text-slate-400 mt-0.5">{sub}</p>
+              </div>
             </motion.div>
           ))}
         </div>
