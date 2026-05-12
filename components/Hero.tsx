@@ -149,9 +149,7 @@ export function Hero() {
               transition={{ duration: 0.55, delay: 0.2 }}
               className="mt-7 text-lg text-slate-400 leading-relaxed max-w-lg mx-auto lg:mx-0"
             >
-              Stop slow-charging overnight. VIR Electric installs professional home
-              EV chargers for any home — licensed, insured, and often completed
-              next-day.
+              Sick of slow-charging overnight? VIR Electric installs speedy professional home EV chargers — licensed, insured, and often completed next-day.
             </motion.p>
 
             <motion.div
