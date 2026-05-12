@@ -71,12 +71,6 @@ export function Navbar() {
               <Phone className="w-3.5 h-3.5" />
               {PHONE}
             </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-md shadow-blue-600/20"
-            >
-              Contact Us
-            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -122,13 +116,6 @@ export function Navbar() {
                 >
                   <Phone className="w-4 h-4" />
                   {PHONE}
-                </a>
-                <a
-                  href="#contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl text-sm transition-colors"
-                >
-                  Contact Us
                 </a>
               </div>
             </div>
