@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
-import { CALENDLY_URL, PHONE_HREF } from "@/lib/constants";
+import { PHONE_HREF } from "@/lib/constants";
 
 const tiers = [
   {
@@ -152,9 +152,7 @@ export function Pricing() {
 
               {/* CTA */}
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={PHONE_HREF}
                 className={`mt-7 block w-full text-center font-semibold py-3 rounded-xl transition-all duration-200 text-sm ${tier.btnClass}`}
               >
                 Get Started

@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarCheck, ScanSearch, Zap } from "lucide-react";
+import { Phone, ScanSearch, Zap } from "lucide-react";
 
 const steps = [
   {
-    icon: CalendarCheck,
-    title: "Schedule a Free Consultation",
+    icon: Phone,
+    title: "Give Us a Call or Text",
     description:
-      "Book online through Calendly, or call or text us directly. We'll discuss your home, your EV, and your charging goals — no obligation.",
+      "Reach out by phone, text, or email. We'll discuss your home, your EV, and your charging goals — no obligation, no pressure.",
   },
   {
     icon: ScanSearch,

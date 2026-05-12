@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Phone, MessageSquare, Zap, ChevronDown } from "lucide-react";
-import { PHONE_HREF, SMS_HREF, CALENDLY_URL } from "@/lib/constants";
+import { Phone, MessageSquare, Mail, Zap, ChevronDown } from "lucide-react";
+import { PHONE_HREF, SMS_HREF, EMAIL_HREF } from "@/lib/constants";
 
 const trustChips = [
   "Licensed & Insured",
@@ -69,17 +69,8 @@ export function Hero() {
             className="mt-8 flex flex-wrap gap-3"
           >
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-blue-600/25 text-sm"
-            >
-              <Calendar className="w-4 h-4" />
-              Schedule Consultation
-            </a>
-            <a
               href={PHONE_HREF}
-              className="inline-flex items-center gap-2 bg-white/8 hover:bg-white/14 border border-white/12 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-blue-600/25 text-sm"
             >
               <Phone className="w-4 h-4" />
               Call Now
@@ -90,6 +81,13 @@ export function Hero() {
             >
               <MessageSquare className="w-4 h-4" />
               Text Us
+            </a>
+            <a
+              href={EMAIL_HREF}
+              className="inline-flex items-center gap-2 bg-white/8 hover:bg-white/14 border border-white/12 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm"
+            >
+              <Mail className="w-4 h-4" />
+              Email Us
             </a>
           </motion.div>
 

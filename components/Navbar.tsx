@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap, Phone, Menu, X, Calendar } from "lucide-react";
-import { PHONE_HREF, PHONE, CALENDLY_URL } from "@/lib/constants";
+import { Zap, Phone, Menu, X } from "lucide-react";
+import { PHONE_HREF, PHONE } from "@/lib/constants";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -72,13 +72,10 @@ export function Navbar() {
               {PHONE}
             </a>
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-md shadow-blue-600/20"
             >
-              <Calendar className="w-3.5 h-3.5" />
-              Schedule Now
+              Contact Us
             </a>
           </div>
 
@@ -127,13 +124,11 @@ export function Navbar() {
                   {PHONE}
                 </a>
                 <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contact"
+                  onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl text-sm transition-colors"
                 >
-                  <Calendar className="w-4 h-4" />
-                  Schedule Free Consultation
+                  Contact Us
                 </a>
               </div>
             </div>

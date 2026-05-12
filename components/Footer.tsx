@@ -1,18 +1,17 @@
-import { Zap, Phone, Mail, MapPin, MessageSquare, Calendar } from "lucide-react";
+import { Zap, Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 import {
   PHONE,
   PHONE_HREF,
   SMS_HREF,
   EMAIL,
   EMAIL_HREF,
-  CALENDLY_URL,
   ADDRESS,
 } from "@/lib/constants";
 
 const quickLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Schedule Consultation", href: CALENDLY_URL, external: true },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function Footer() {
@@ -41,14 +40,9 @@ export function Footer() {
           <div>
             <p className="text-white font-semibold text-sm mb-4">Quick Links</p>
             <ul className="space-y-2.5 text-sm">
-              {quickLinks.map(({ label, href, external }) => (
+              {quickLinks.map(({ label, href }) => (
                 <li key={label}>
-                  <a
-                    href={href}
-                    target={external ? "_blank" : undefined}
-                    rel={external ? "noopener noreferrer" : undefined}
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href={href} className="hover:text-white transition-colors">
                     {label}
                   </a>
                 </li>
@@ -85,17 +79,6 @@ export function Footer() {
                 >
                   <Mail className="w-3.5 h-3.5 flex-shrink-0" />
                   {EMAIL}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-white transition-colors"
-                >
-                  <Calendar className="w-3.5 h-3.5 flex-shrink-0" />
-                  Schedule Online
                 </a>
               </li>
             </ul>

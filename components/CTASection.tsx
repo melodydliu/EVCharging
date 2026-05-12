@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Phone, MessageSquare, Mail } from "lucide-react";
-import { CALENDLY_URL, PHONE_HREF, SMS_HREF, EMAIL_HREF, PHONE, EMAIL } from "@/lib/constants";
+import { Phone, MessageSquare, Mail } from "lucide-react";
+import { PHONE_HREF, SMS_HREF, EMAIL_HREF, PHONE, EMAIL } from "@/lib/constants";
 
 const contactOptions = [
-  { icon: Phone, label: PHONE, href: PHONE_HREF },
-  { icon: MessageSquare, label: "Text Us", href: SMS_HREF },
-  { icon: Mail, label: EMAIL, href: EMAIL_HREF },
+  { icon: Phone, label: "Call Us", sublabel: PHONE, href: PHONE_HREF },
+  { icon: MessageSquare, label: "Text Us", sublabel: PHONE, href: SMS_HREF },
+  { icon: Mail, label: "Email Us", sublabel: EMAIL, href: EMAIL_HREF },
 ];
 
 export function CTASection() {
@@ -36,32 +36,25 @@ export function CTASection() {
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto text-base leading-relaxed">
             Join Oahu homeowners who made the switch to fast, reliable home
-            charging. Schedule your free consultation — often completed next-day.
+            charging. Give us a call, send a text, or shoot us an email — we&apos;ll
+            get back to you fast.
           </p>
 
-          {/* Primary CTA */}
-          <div className="mt-9">
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-blue-600/20 text-sm"
-            >
-              <Calendar className="w-4 h-4" />
-              Schedule Free Consultation
-            </a>
-          </div>
-
-          {/* Secondary contact options */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {contactOptions.map(({ icon: Icon, label, href }) => (
+          {/* Contact options */}
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            {contactOptions.map(({ icon: Icon, label, sublabel, href }) => (
               <a
                 key={href}
                 href={href}
-                className="inline-flex items-center gap-2 border border-white/12 hover:bg-white/6 text-slate-400 hover:text-white px-5 py-2.5 rounded-xl transition-all duration-200 text-sm font-medium"
+                className="flex items-center gap-3 bg-white/6 hover:bg-white/10 border border-white/10 hover:border-white/20 px-6 py-4 rounded-xl transition-all duration-200 group"
               >
-                <Icon className="w-4 h-4" />
-                {label}
+                <div className="w-9 h-9 rounded-lg bg-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600/30 transition-colors">
+                  <Icon className="w-4 h-4 text-blue-400" />
+                </div>
+                <div className="text-left">
+                  <p className="text-white font-semibold text-sm">{label}</p>
+                  <p className="text-slate-500 text-xs mt-0.5">{sublabel}</p>
+                </div>
               </a>
             ))}
           </div>
